@@ -1,47 +1,43 @@
+<!DOCTYPE html>
 <html>
-   <head> 
-     <script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<body>
 
-     <script>
-      function getTasks() {
-        $.get("https://localhost/TEST.TestService.svc/rest/Services?CostCentreNo=1&Filter=0",
-          function(data){
-            alert("Data Loaded: " + data);
-          });
-    }
-	
-	
-var person = {
-    firstName : "John",
-    lastName  : "Doe",
-    age       : 50,
-    eyeColor  : "blue"
-};
-function updatedemo(){
-document.getElementById("demo").innerHTML = person.firstName + " is " + person.age + " years old.";
-}
+<p>Click the button to display the date.</p>
 
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+			
+function displayDate() {
+			var personObj = {
+				firstName : "John",
+				lastName  : "Doe",
+				age       : 50,
+				eyeColor  : "blue"
+			};
+
+			var person = [];
+			person[0] = {no1: "01",
+								no2:"02",
+								no3:"03",
+								no4:"04",
+								no5:"05",
+								no6:"06",
+								noAdd:"07"};
+			person[1] = {no1: "11",
+								no2:"12",
+								no3:"13",
+								no4:"14",
+								no5:"15",
+								no6:"16",
+								noAdd:"17"};
+
+								var cars = ["Saab", "Volvo", "BMW"];
+				document.getElementById("demo").innerHTML = person[1].no2;
+			}
 </script>
 
+<p id="demo"></p>
 
-   </head>
-   <body>
-   
-   <p id="demo">demo text</p>
-   
-	  <form >
-First name:<br>
-<input type="text" name="firstname">
-<br>
-Last name:<br>
-<input type="text" name="lastname">
-<br><br>
-<input type="submit">
-</form>
-
-<p>Note that the form itself is not visible.</p>
-<p>Also note that the default width of a text field is 20 characters.</p>
-
-      <button onclick="javascript:updatedemo();">Update Demo text</button>
-   </body>
-</html>
+</body>
+</html> 
